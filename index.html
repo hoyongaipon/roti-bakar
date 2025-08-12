@@ -54,25 +54,38 @@
     </div>
   </div>
 
-  <form>
+  <form id="orderForm">
     <h3>Pesan Sekarang</h3>
     <label>Nama:</label><br>
-    <input type="text" name="nama" required><br>
+    <input type="text" id="name" placeholder="Nama" required><br>
     <label>Pesanan:</label><br>
-    <select name="pesanan" required>
-      <option value="">Pilih menu</option>
-      <option value="Coklat">Roti Bakar Coklat</option>
-      <option value="Keju">Roti Bakar Keju</option>
-      <option value="Kacang">Roti Bakar Kacang</option>
-      <option value="Stroberi">Roti Bakar Selai Stroberi</option>
+    <select id="menu" required>
+      <option value="">Pilih Menu</option>
+      <option value="Roti Bakar Coklat">Roti Bakar Coklat</option>
+      <option value="Roti Bakar Keju">Roti Bakar Keju</option>
+      <option value="Roti Bakar Kacang">Roti Bakar Kacang</option>
+      <option value="Roti Bakar Selai Stroberi">Roti Bakar Selai Stroberi</option>
     </select><br>
     <label>Jumlah:</label><br>
-    <input type="number" name="jumlah" min="1" value="1" required><br>
-    <button type="submit">Kirim Pesanan</button>
+    <input type="number" id="jumlah" min="1" value="1" required><br>
+    <button type="submit">Pesan via WhatsApp</button>
   </form>
 
   <footer>
-    Hubungi kami: 0812-3456-7890 | Lokasi: Jalan Roti No.10
+    Hubungi kami: 0851-7113-0091 | Lokasi: Jl.cipanas galunggung no 08
   </footer>
+
+  <script>
+  document.getElementById("orderForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = document.getElementById("name").value;
+    var menu = document.getElementById("menu").value;
+    var jumlah = document.getElementById("jumlah").value;
+    var waNumber = "6281234567890"; // Ganti dengan nomor WhatsApp kamu pakai format internasional tanpa +
+    var message = `Pesanan dari: ${name}%0AMenu: ${menu}%0AJumlah: ${jumlah}`;
+    var url = `https://wa.me/${085171130091}?text=${message}`;
+    window.open(url, "_blank");
+  });
+  </script>
 </body>
 </html>
