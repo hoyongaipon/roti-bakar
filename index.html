@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Roti Bakar Mantap</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff4e6; color: #5a351c; margin: 20px; }
+    header { text-align: center; }
+    h1 { font-size: 2.5em; }.menu { max-width: 400px; margin: 20px auto; }.menu-item { padding: 10px; border-bottom: 1px solid #d9b382; }.price { float: right; font-weight: bold; }
+    footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #8c6d41; }
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 10px;
+      background: #fcefdb;
+      border-radius: 8px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #d9b382;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background: #5a351c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #7a5025;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Roti Bakar Mantap</h1>
+    <p>Enak, hangat, dan bikin nagih!</p>
+  </header>
+
+  <div class="menu">
+    <div class="menu-item">
+      Roti Bakar Coklat <span class="price">Rp10.000</span>
+    </div>
+    <div class="menu-item">
+      Roti Bakar Keju <span class="price">Rp12.000</span>
+    </div>
+    <div class="menu-item">
+      Roti Bakar Kacang <span class="price">Rp11.000</span>
+    </div>
+    <div class="menu-item">
+      Roti Bakar Selai Stroberi <span class="price">Rp13.000</span>
+    </div>
+  </div>
+
+  <form>
+    <h3>Pesan Sekarang</h3>
+    <label>Nama:</label><br>
+    <input type="text" name="nama" required><br>
+    <label>Pesanan:</label><br>
+    <select name="pesanan" required>
+      <option value="">Pilih menu</option>
+      <option value="Coklat">Roti Bakar Coklat</option>
+      <option value="Keju">Roti Bakar Keju</option>
+      <option value="Kacang">Roti Bakar Kacang</option>
+      <option value="Stroberi">Roti Bakar Selai Stroberi</option>
+    </select><br>
+    <label>Jumlah:</label><br>
+    <input type="number" name="jumlah" min="1" value="1" required><br>
+    <button type="submit">Kirim Pesanan</button>
+  </form>
+
+  <footer>
+    Hubungi kami: 0812-3456-7890 | Lokasi: Jalan Roti No.10
+  </footer>
+</body>
+</html>
